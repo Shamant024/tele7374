@@ -29,4 +29,6 @@ fn main()
     	println!("d = {}, Address = {:p}", d, &d);
     	println!("e = {}, Address = {:p}", e, &e);
     	println!("f = {}, Address = {:p}", f, &f);
+
+	std::process::exit(10);
 }
