@@ -1,11 +1,10 @@
 CC = gcc
 RUSTC = rustc
-RUSTLIB_PATH = /usr/lib/rustlib/aarch64-unknown-linux-gnu/lib
 
 all: main
 
 main: main.o module1.o module2.o
-	$(CC) $(CFLAGS) -o main main.o module1.o module2.o 
+	$(CC) $(CFLAGS) -o main main.o module1.o module2.o /usr/lib/rustlib/arm-unknown-linux-gnueabihf/lib/lib*.so
 
 main.o: main.rs
 	$(RUSTC) main.rs --emit=obj
